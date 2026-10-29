@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<style>
+:root {
+  --bg: #fbf8f2; --text: #2a241c; --dim: #6f6352; --rule: #e4dccd; --accent: #8a6a12; --link: #7a5a06;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #15120e; --text: #e8ddc7; --dim: #a39577; --rule: #3a3227; --accent: #ffd23f; --link: #e9c56d; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+header, main, footer { max-width: 44rem; margin: 0 auto; padding: 0 1rem; }
+header { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; align-items: baseline; padding-top: 1.5rem;
+  padding-bottom: .75rem; border-bottom: 1px solid var(--rule); }
+header a { color: var(--dim); text-decoration: none; font-size: .95rem; }
+header a.home { color: var(--accent); font-weight: 650; letter-spacing: .04em; margin-right: auto; }
+header a:hover { color: var(--text); }
+main { padding-top: 1rem; padding-bottom: 3rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 1.2rem 0 .8rem; }
+h2 { font-size: 1.3rem; margin: 2rem 0 .6rem; }
+a { color: var(--link); }
+ul { padding-left: 1.3rem; }
+li { margin: .25rem 0; }
+footer { color: var(--dim); font-size: .85rem; padding-top: 1rem; padding-bottom: 2rem; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<header>
+  <a class="home" href="/">Burhan Köseler</a>
+  <a href="/lockpick/support/">Lockpick support</a>
+  <a href="/lockpick/privacy/">Privacy policy</a>
+</header>
+<main>
+{{ content }}
+</main>
+<footer>© Burhan Köseler · <a href="mailto:lockpick@ksburhan.com">lockpick@ksburhan.com</a></footer>
+</body>
+</html>

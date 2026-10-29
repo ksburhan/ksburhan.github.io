@@ -1,0 +1,7 @@
+title: Burhan Köseler
+description: Games by Burhan Köseler
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - README.md
