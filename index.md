@@ -1,14 +1,12 @@
 ---
 layout: default
-title: Games by Burhan Köseler
+title: Projects by Burhan Köseler
 ---
 
-# Games by Burhan Köseler
+# Projects by Burhan Köseler
 
-## Lockpick
+Apps and games I've made.
 
-A puzzle game for iPhone and Android: slide every pin to the center line, and mind the hidden links between the
-plates.
+## Projects
 
-- [Support](lockpick/support/)
-- [Privacy policy](lockpick/privacy/)
+- **[Lockpick](lockpick/)**: a puzzle game for iPhone and Android.

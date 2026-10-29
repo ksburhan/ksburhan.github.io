@@ -33,12 +33,17 @@ footer { color: var(--dim); font-size: .85rem; padding-top: 1rem; padding-bottom
 <body>
 <header>
   <a class="home" href="/">Burhan Köseler</a>
-  <a href="/lockpick/support/">Lockpick support</a>
+{%- if page.url contains "/lockpick/" %}
+  <a href="/lockpick/">Lockpick</a>
+  <a href="/lockpick/support/">Support</a>
   <a href="/lockpick/privacy/">Privacy policy</a>
+{%- endif %}
 </header>
 <main>
 {{ content }}
 </main>
-<footer>© Burhan Köseler · <a href="mailto:lockpick@ksburhan.com">lockpick@ksburhan.com</a></footer>
+<footer>© Burhan Köseler
+{%- if page.url contains "/lockpick/" %} · <a href="mailto:lockpick@ksburhan.com">lockpick@ksburhan.com</a>{% endif -%}
+</footer>
 </body>
 </html>
