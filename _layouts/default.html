@@ -7,10 +7,17 @@
 <meta name="description" content="{{ site.description }}">
 <style>
 :root {
-  --bg: #fbf8f2; --text: #2a241c; --dim: #6f6352; --rule: #e4dccd; --accent: #8a6a12; --link: #7a5a06;
+  --bg: #ffffff; --text: #111827; --dim: #4b5563; --rule: #e5e7eb; --accent: #111827; --link: #0284c7; --hover: #7dd3fc;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #15120e; --text: #e8ddc7; --dim: #a39577; --rule: #3a3227; --accent: #ffd23f; --link: #e9c56d; }
+  :root { --bg: #171717; --text: #e5e7eb; --dim: #a3a3a3; --rule: #374151; --accent: #f9fafb; --link: #7dd3fc; --hover: #bae6fd; }
+}
+/* Lockpick's pages keep the game's warm brass colors. */
+body.lockpick {
+  --bg: #fbf8f2; --text: #2a241c; --dim: #6f6352; --rule: #e4dccd; --accent: #8a6a12; --link: #7a5a06; --hover: #2a241c;
+}
+@media (prefers-color-scheme: dark) {
+  body.lockpick { --bg: #15120e; --text: #e8ddc7; --dim: #a39577; --rule: #3a3227; --accent: #ffd23f; --link: #e9c56d; --hover: #e8ddc7; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
@@ -20,7 +27,7 @@ header { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; align-items: basel
   padding-bottom: .75rem; border-bottom: 1px solid var(--rule); }
 header a { color: var(--dim); text-decoration: none; font-size: .95rem; }
 header a.home { color: var(--accent); font-weight: 650; letter-spacing: .04em; margin-right: auto; }
-header a:hover { color: var(--text); }
+header a:hover { color: var(--hover); }
 main { padding-top: 1rem; padding-bottom: 3rem; }
 h1 { font-size: 1.9rem; line-height: 1.2; margin: 1.2rem 0 .8rem; }
 h2 { font-size: 1.3rem; margin: 2rem 0 .6rem; }
@@ -30,7 +37,7 @@ li { margin: .25rem 0; }
 footer { color: var(--dim); font-size: .85rem; padding-top: 1rem; padding-bottom: 2rem; border-top: 1px solid var(--rule); }
 </style>
 </head>
-<body>
+<body{% if page.url contains "/lockpick/" %} class="lockpick"{% endif %}>
 <header>
   <a class="home" href="/">Burhan Köseler</a>
 {%- if page.url contains "/lockpick/" %}
